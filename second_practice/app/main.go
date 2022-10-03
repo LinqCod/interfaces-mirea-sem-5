@@ -19,7 +19,7 @@ func main() {
 	rService := requesterService.NewService(reqConfig)
 	rHandler := requesterHandler.NewHandler(rService)
 
-	http.HandleFunc("/api/historicalCurrenciesByPeriod", rHandler.GetHistoricalCurrencies)
+	http.HandleFunc("/api/historicalCurrenciesByPeriod", rHandler.GetHistoricalCurrenciesByPeriod)
 	http.HandleFunc("/api/historicalCurrencies", rHandler.GetHistoricalCurrencies)
 	http.HandleFunc("/api/supportedCurrencies", rHandler.GetSupportedCurrencies)
 
