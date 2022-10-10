@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	reqConfig, err := requesterConfig.LoadConfig(".")
+	reqConfig, err := requesterConfig.LoadConfig("..")
 	if err != nil {
 		log.Fatalf("cannot load config: %v", err)
 	}
