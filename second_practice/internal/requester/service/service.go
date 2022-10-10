@@ -89,7 +89,7 @@ func (r Service) GetSupportedCurrencies() ([]byte, error) {
 	if err != nil {
 		return nil, errors.New(fmt.Sprintf("error while creating supported currencies request. %v", err))
 	}
-	reqSupportedCurrencies.Header.Set("apukey", r.config.ApiKey)
+	reqSupportedCurrencies.Header.Set("apikey", r.config.ApiKey)
 
 	result, err := r.doRequest(reqSupportedCurrencies)
 	if err != nil {
